@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL']
   database: Cajuzinho_production
-  username: Cajuzinho
-  password: <%= ENV['CAJUZINHO_DATABASE_PASSWORD'] %>
+  username: lfjfzwhbauygkl
+  password: DiTDMJe9ZfozoNh-35tlMw7ooX
+  #password: <%= ENV['CAJUZINHO_DATABASE_PASSWORD'] %>
