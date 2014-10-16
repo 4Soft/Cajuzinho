@@ -42,4 +42,8 @@ gem 'rails_12factor', group: :production
 
 gem 'devise'
 
+gem 'bootstrap-sass'
+
+gem 'autoprefixer-rails'
+
 ruby '2.1.2'
