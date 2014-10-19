@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
+#Diegodidthis
+gem 'simple_form'
 
+gem 'country_select'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use postgresql as the database for Active Record
