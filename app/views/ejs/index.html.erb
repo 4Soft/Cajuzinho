@@ -1,0 +1,22 @@
+
+<h1> EJ </h1>
+
+<table>
+	<tr>
+	<th>Nome Formal:</th>
+    <th>CNPJ:</th>
+    <th>Site:</th>
+  </tr>
+
+  <% @ej.each do |ej| %>
+
+    <tr>
+    <th><%= ej.formal_name %></th>
+    <th><%= ej.cnpj %></th>
+    <th><%= ej.site %></th>
+    <th><%= link_to "Editar", edit_ej_path(ej) %></th>
+  </tr>
+
+  <% end %>
+
+</table>

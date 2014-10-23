@@ -1,0 +1,21 @@
+<%= form_for @ej do |f| %>
+  
+  <p>
+    <%= f.label :formal_name, "Nome Formal" %><br>
+    <%= f.text_field :formal_name %>
+  </p>
+ 
+  <p>
+    <%= f.label :cnpj, "CNPJ" %><br>
+    <%= f.text_field :cnpj %>
+  </p>
+
+  <p>
+    <%= f.label :site, "Site" %><br>
+    <%= f.text_field :site %>
+  </p>
+ 
+  <p>
+    <%= f.submit "Salvar EJ"%>
+  </p>
+<% end %>
