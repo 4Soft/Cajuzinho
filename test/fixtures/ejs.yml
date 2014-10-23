@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  formal_name: MyString
+  cnpj: MyString
+  site: MyString
+
+two:
+  formal_name: MyString
+  cnpj: MyString
+  site: MyString
