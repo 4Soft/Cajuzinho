@@ -1,4 +1,15 @@
 <%= form_for @ej do |f| %>
+
+  <% if @ej.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@ej.errors.count, "erro").upcase %>: </h2>
+    <ul>
+    <% @ej.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
   
   <p>
     <%= f.label :formal_name, "Nome Formal" %><br>
@@ -18,4 +29,5 @@
   <p>
     <%= f.submit "Salvar EJ"%>
   </p>
+  <%= link_to "Home", ejs_path %>
 <% end %>

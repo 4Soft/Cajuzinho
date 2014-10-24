@@ -3,14 +3,14 @@
 
 <table>
 	<tr>
-	<th>Nome Formal:</th>
+    <th>Nome Formal:</th>
     <th>CNPJ:</th>
     <th>Site:</th>
   </tr>
 
   <% @ej.each do |ej| %>
 
-    <tr>
+  <tr>
     <th><%= ej.formal_name %></th>
     <th><%= ej.cnpj %></th>
     <th><%= ej.site %></th>
@@ -20,3 +20,6 @@
   <% end %>
 
 </table>
+
+<p>
+  <%= link_to "Cadastrar EJ", new_ej_path %>
