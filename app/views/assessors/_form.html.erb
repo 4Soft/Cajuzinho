@@ -1,4 +1,9 @@
-<%= form_for(@assessor) do |f| %>
+<!-- Para a collection - https://github.com/4Soft/iglesiasapi/blob/master/app/views/people/_form.html.erb -->
+
+<!-- Simple Form - https://github.com/plataformatec/simple_form#usage -->
+
+
+<%= simple_form_for(@assessor) do |f| %>
   <% if @assessor.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@assessor.errors.count, "error") %> prohibited this assessor from being saved:</h2>
@@ -12,10 +17,9 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :role %><br>
-    <%= f.text_field :role %>
+    <%= f.input :role, label: "Cargo na federação" %><br>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit, "Enviar" %>
   </div>
 <% end %>
