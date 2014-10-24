@@ -45,6 +45,8 @@ gem 'rails_12factor', group: :production
 
 gem 'devise'
 
+gem 'devise_invitable', '~> 1.3.4'
+
 gem 'bootstrap-sass'
 
 gem 'autoprefixer-rails'
