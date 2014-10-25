@@ -1,5 +1,7 @@
 class AssessorsController < ApplicationController
+
   before_action :set_assessor, only: [:show, :edit, :update, :destroy]
+  before_action :set_collections, only: [:new, :edit]
 
   # GET /assessors
   # GET /assessors.json
@@ -72,5 +74,10 @@ class AssessorsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def assessor_params
       params.require(:assessor).permit(:role)
+    end
+
+    def set_collections
+      @cargos = ["Presidente", "Diretor Financeiro", "Diretor de RH", "Diretor de Marketing", "Outro"]
+      
     end
 end
