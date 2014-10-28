@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 #Diegodidthis
+gem 'sqlite3', group: :development 
+
 gem 'simple_form'
 
 gem 'country_select'
