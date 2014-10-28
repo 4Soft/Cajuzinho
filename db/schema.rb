@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20141028012131) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "name",                   default: "", null: false
     t.string   "username",               default: "", null: false
     t.string   "address",                default: "", null: false
     t.string   "facebook",               default: ""
@@ -44,6 +45,8 @@ ActiveRecord::Schema.define(version: 20141028012131) do
     t.integer  "telephone",              default: 0,  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "role_id"
+    t.string   "role_type"
     t.string   "invitation_token"
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
@@ -59,6 +62,7 @@ ActiveRecord::Schema.define(version: 20141028012131) do
   add_index "users", ["invitations_count"], name: "index_users_on_invitations_count"
   add_index "users", ["invited_by_id"], name: "index_users_on_invited_by_id"
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["role_id", "role_type"], name: "index_users_on_role_id_and_role_type"
   add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end

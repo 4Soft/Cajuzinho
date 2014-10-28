@@ -30,6 +30,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
+      t.string :name, null:false, default: ""
       t.string :username, null: false, default: ""
       t.string :address, null: false, default: ""
       t.string :facebook, default: ""
@@ -43,5 +44,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
     add_index :users, :username,             unique: true
+    add_reference :users, :role, polymorphic: true, index: true
   end
 end
