@@ -77,7 +77,7 @@ class AssessorsController < ApplicationController
     end
 
     def set_collections
-      @cargos = ["Presidente", "Diretor Financeiro", "Diretor de RH", "Diretor de Marketing", "Outro"]
+      @cargos = ["Presidente executivo", "Vice-Presidente", "Diretor Administrativo", "Diretor de Comunicação e Marketing", "Diretor de Desenvolvimento", "Presidente do Conselho deliberativo", "Outro"]
       
     end
 end
