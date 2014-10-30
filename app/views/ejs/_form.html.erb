@@ -1,0 +1,31 @@
+<%= simple_form_for @ej, html: { class: 'form-inline'} do |f| %>
+
+  <% if @ej.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@ej.errors.count, "erro").upcase %>: </h2>
+    <ul>
+    <% @ej.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  
+  <p>
+    <%= f.input :formal_name, label: "Nome Formal" %>
+  </p>
+ 
+  <p>
+    <%= f.input :cnpj, label: "CNPJ"%>
+  </p>
+
+  <p>
+    <%= f.input :site, label: "Site"%>
+  </p>
+ 
+  <p>
+    <%= f.button :submit, "Salvar EJ"%>
+  </p>
+  <%= link_to "Home", ejs_path %>
+<% end %>
+

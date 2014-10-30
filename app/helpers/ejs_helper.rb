@@ -1,0 +1,2 @@
+module EjsHelper
+end
