@@ -1,4 +1,4 @@
-<%= form_for @ej do |f| %>
+<%= simple_form_for @ej, html: { class: 'form-inline'} do |f| %>
 
   <% if @ej.errors.any? %>
   <div id="error_explanation">
@@ -12,22 +12,20 @@
   <% end %>
   
   <p>
-    <%= f.label :formal_name, "Nome Formal" %><br>
-    <%= f.text_field :formal_name %>
+    <%= f.input :formal_name, label: "Nome Formal" %>
   </p>
  
   <p>
-    <%= f.label :cnpj, "CNPJ" %><br>
-    <%= f.text_field :cnpj %>
+    <%= f.input :cnpj, label: "CNPJ"%>
   </p>
 
   <p>
-    <%= f.label :site, "Site" %><br>
-    <%= f.text_field :site %>
+    <%= f.input :site, label: "Site"%>
   </p>
  
   <p>
-    <%= f.submit "Salvar EJ"%>
+    <%= f.button :submit, label: "Salvar EJ"%>
   </p>
   <%= link_to "Home", ejs_path %>
 <% end %>
+
