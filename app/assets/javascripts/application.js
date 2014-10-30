@@ -22,10 +22,10 @@
 var ready;
 ready = function() {
 
-  jQuery(function($){
+  jQuery(function(){
      $("#date").mask("99/99/9999");
-     $("#ej_member_cpf").mask("999.999.999-99", {autoclear: false});
-     $("#ej_cnpj").mask("99.999.999/9999-99", {autoclear: false});
+     $("#ej_member_cpf").mask("999.999.999-99");
+     $("#ej_cnpj").mask("99.999.999/9999-99");
     //  $("#person_email").mask("?@?");
   });
 
