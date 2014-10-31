@@ -53,4 +53,6 @@ gem 'bootstrap-sass'
 
 gem 'autoprefixer-rails'
 
+gem 'maskedinput-rails'
+
 ruby '2.1.2'
