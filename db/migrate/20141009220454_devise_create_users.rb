@@ -36,6 +36,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :facebook, default: ""
       t.string :skype, default: ""
       t.integer :telephone, null: false, default: 0
+      t.references :role, polymorphic: true
       t.timestamps
     end
 
@@ -44,6 +45,5 @@ class DeviseCreateUsers < ActiveRecord::Migration
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
     add_index :users, :username,             unique: true
-    add_reference :users, :role, polymorphic: true, index: true
   end
 end
