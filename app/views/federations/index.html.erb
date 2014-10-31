@@ -1,0 +1,24 @@
+<h1> Federation </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome Formal:</th>
+      <th>CNPJ:</th>
+      <th>Site:</th>
+    </tr>
+  </thead>
+
+
+
+  
+  <tr>
+   <% @federations.each do |federation| %>
+   <th><%= federation.formal_name %></th>
+   <th><%= federation.cnpj %></th>
+   <th><%= federation.site %></th>
+   <th><%= link_to "Editar", edit_federation_path(federation) %></th>
+</tr>
+<% end %>
+</table>
+<%= link_to "Cadastrar Federação", new_federation_path %>
