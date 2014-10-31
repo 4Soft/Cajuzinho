@@ -26,6 +26,7 @@ ready = function() {
      $("#date").mask("99/99/9999");
      $("#ej_member_cpf").mask("999.999.999-99");
      $("#ej_cnpj").mask("99.999.999/9999-99");
+     $("#federation_cnpj").mask("99.999.999/9999-99");
     //  $("#person_email").mask("?@?");
   });
 
