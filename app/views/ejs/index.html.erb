@@ -1,5 +1,5 @@
 
-<h1> EJ </h1>
+<h1> EJs </h1>
 
 <table>
 	<tr>
@@ -14,6 +14,7 @@
     <th><%= ej.formal_name %></th>
     <th><%= ej.cnpj %></th>
     <th><%= ej.site %></th>
+    <th><%= link_to "Mostrar", ej %></th>
     <th><%= link_to "Editar", edit_ej_path(ej) %></th>
   </tr>
 
@@ -22,4 +23,4 @@
 </table>
 
 <p>
-  <%= link_to "Cadastrar EJ", new_ej_path %>
+<%= link_to "Cadastrar EJ", new_ej_path %>
