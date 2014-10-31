@@ -1,0 +1,37 @@
+<%= simple_form_for @federation, html: { class: 'form-inline'} do |f| %>
+  
+  <% if @federation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@federation.errors.count, "error").upcase %>: </h2>
+
+      <ul>
+      <% @federation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.input :formal_name, label: "Nome Formal" %>
+  </p>
+
+  <p>
+      <%= f.input :cnpj, label: "CNPJ" %>
+  </p>
+
+  <p>
+    <%= f.input :site, label: "Site" %>
+  </p>
+
+  <p>
+    <%=f.button :submit, "Salvar Federação" %>
+  </p>
+
+
+  <%= link_to "Home", federations_path %>
+  
+  <div class="actions">
+    
+  </div>
+<% end %>
