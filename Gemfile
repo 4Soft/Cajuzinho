@@ -47,12 +47,18 @@ gem 'rails_12factor', group: :production
 
 gem 'devise'
 
+<<<<<<< HEAD
 gem 'devise_invitable', '~> 1.3.4'
 
+=======
+>>>>>>> #14
 gem 'bootstrap-sass'
 
 gem 'autoprefixer-rails'
 
+<<<<<<< HEAD
 gem 'maskedinput-rails'
 
+=======
+>>>>>>> #14
 ruby '2.1.2'

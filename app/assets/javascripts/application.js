@@ -16,6 +16,7 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
+<<<<<<< HEAD
 //= require maskedinput
 
 
@@ -33,3 +34,5 @@ ready = function() {
 
 $(document).ready(ready);
 $(document).on('page:load', ready);
+=======
+>>>>>>> #14
