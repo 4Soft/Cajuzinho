@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
-$navbar-default-bg: #98FB98;
+
+//bootstrap
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+//lumen bootswatch
+//@import "bootswatch/lumin/bootswatch";

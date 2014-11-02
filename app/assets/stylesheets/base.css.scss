@@ -1,0 +1,41 @@
+body{
+  //background-color: ;
+  margin-top: -65px;
+  magin-botton: 65px;
+}
+
+.margin-top{
+  margin-top:1.5em
+}
+
+//nav-bar collor
+//$navbar-default-bg: #98FB98;
+.navbar{
+  background: #98FB98;
+  border: none;
+  border-raius: 0;
+  font-weight: 300;
+  a{
+    //color: 
+  }
+  .navbar-logo{
+    //widht: 32px;
+    height: 35px;
+    // Put logo upper. 
+  }
+  .navbar-nav{
+    margin-top: 4px;
+    margin-bottom:4px;
+  }
+  margin-botton: 0;
+  
+}
+
+.inline{
+  display: inline-block;
+}
+
+//botton:
+.btn{
+  text-transform: uppercase;  
+}
