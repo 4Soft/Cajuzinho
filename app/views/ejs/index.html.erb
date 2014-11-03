@@ -7,7 +7,7 @@
 
 <table>
 	<tr>
-    <th>Nome Formal:</th>
+    <th>Nome Formal:</th>  <!-- put labels -->
     <th>CNPJ:</th>
     <th>Site:</th>
   </tr>
@@ -18,8 +18,8 @@
     <th><%= ej.formal_name %></th>
     <th><%= ej.cnpj %></th>
     <th><%= ej.site %></th>
-    <th><%= link_to "Mostrar", ej %></th>
-    <th><%= link_to "Editar", edit_ej_path(ej) %></th>
+    <th><%= link_to "Mostrar", ej, class: "btn btn-default" %></th>
+    <th><%= link_to "Editar", edit_ej_path(ej), class: "btn btn-default" %></th>
   </tr>
 
   <% end %>
@@ -27,4 +27,4 @@
 </table>
 
 <p>
-<%= link_to "Cadastrar EJ", new_ej_path %>
+<%= link_to "Cadastrar EJ", new_ej_path, class: "btn btn-default" %>

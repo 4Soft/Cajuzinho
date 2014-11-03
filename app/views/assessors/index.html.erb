@@ -8,7 +8,7 @@
 <table>
   <thead>
     <tr>
-      <th>Cargo</th>
+      <th>Cargo</th> <!-- put label -->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +17,9 @@
     <% @assessors.each do |assessor| %>
       <tr>
         <td><%= assessor.role %></td>
-        <td><%= link_to 'Mostrar', assessor %></td>
-        <td><%= link_to 'Editar', edit_assessor_path(assessor) %></td>
-        <td><%= link_to 'Deletar', assessor, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <td><%= link_to 'Mostrar', assessor, class: "btn btn-default" %></td>
+        <td><%= link_to 'Editar', edit_assessor_path(assessor), class: "btn btn-default" %></td>
+        <td><%= link_to 'Deletar', assessor, class: "btn btn-default", method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -27,4 +27,4 @@
 
 <br>
 
-<%= link_to 'Cadastrar Acessor', new_assessor_path %>
+<%= link_to 'Cadastrar Assessor', new_assessor_path, class: "btn btn-default" %>
