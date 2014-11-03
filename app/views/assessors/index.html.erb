@@ -20,6 +20,7 @@
         <td><%= assessor.role %></td>
         <td><%= link_to 'Mostrar', assessor, class: "btn btn-default" %></td>
         <td><%= link_to 'Editar', edit_assessor_path(assessor),  class: "btn btn-default" %></td>
+        <!-- <span class="icon-edit"></span> Search-->
         <td><%= link_to 'Deletar', assessor, class: "btn btn-default", method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
