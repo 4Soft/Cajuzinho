@@ -32,7 +32,7 @@ class AssessorsController < ApplicationController
 
     respond_to do |format|
       if @assessor.save
-        format.html { redirect_to @assessor, notice: 'Acessor criado com sucesso.' }
+        format.html { redirect_to @assessor, notice: 'Assessor criado com sucesso.' }
         format.json { render :show, status: :created, location: @assessor }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class AssessorsController < ApplicationController
   def update
     respond_to do |format|
       if @assessor.update(assessor_params)
-        format.html { redirect_to @assessor, notice: 'Acessor editado com sucesso.' }
+        format.html { redirect_to @assessor, notice: 'Assessor editado com sucesso.' }
         format.json { render :show, status: :ok, location: @assessor }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class AssessorsController < ApplicationController
   def destroy
     @assessor.destroy
     respond_to do |format|
-      format.html { redirect_to assessors_url, notice: 'Acessor deletado com sucesso.' }
+      format.html { redirect_to assessors_url, notice: 'Assessor deletado com sucesso.' }
       format.json { head :no_content }
     end
   end

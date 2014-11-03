@@ -40,10 +40,31 @@ body{
   text-transform: uppercase;  
 }
 
-/*.btn-a{
-  btn-default;
-}*/
+/*
+//Button with same paramters of btn-default; WITH ERROR
+// http://css-tricks.com/the-extend-concept/
+.btn-a{
+  //@extends .btn btn-default;
+ // &:extend(.btn btn-default all);
+}
 
+// Exemple button with a star: 
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-star"></span> Star
+</button>
+
+.btn-confirm{
+
+}
+
+.btn-delete{
+
+}
+
+.btn-edit{
+
+}
+*/
 .title-login{
   //font-size: 18px;
 }

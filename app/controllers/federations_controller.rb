@@ -26,7 +26,7 @@ class FederationsController < ApplicationController
 
     respond_to do |format|
       if @federation.save
-        format.html { redirect_to @federation, notice: 'Federation was successfully created.' }
+        format.html { redirect_to @federation, notice: 'Federação criada com sucesso.' }
         format.json { render :show, status: :created, location: @federation }
       else
         format.html { render :new }
@@ -39,7 +39,7 @@ class FederationsController < ApplicationController
   def update
     respond_to do |format|
       if @federation.update(federation_params)
-        format.html { redirect_to @federation, notice: 'Federation was successfully updated.' }
+        format.html { redirect_to @federation, notice: 'Federação atualizada com sucesso.' }
         format.json { render :show, status: :ok, location: @federation }
       else
         format.html { render :edit }
@@ -52,7 +52,7 @@ class FederationsController < ApplicationController
   def destroy
     @federation.destroy
     respond_to do |format|
-      format.html { redirect_to federations_url, notice: 'Federation was successfully destroyed.' }
+      format.html { redirect_to federations_url, notice: 'Federação deletada com sucesso.' }
       format.json { head :no_content }
     end
   end
