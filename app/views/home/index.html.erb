@@ -1,3 +1,10 @@
 <h1>Página Inicial</h1>
-<%= link_to "Entrar", new_user_session_path %>
-<%= link_to "Sair", destroy_user_session_path, method: "delete" %>
+<div class="row title-row">
+  <div class="col-md-3 title-line">
+  </div> <!--col-md-3 -->
+</div> <!--row -->
+
+<br />
+<%= link_to "Entrar", new_user_session_path, class: "btn btn-default" %> <br />
+<br />
+<%= link_to "Sair", destroy_user_session_path, method: "delete", class: "btn btn-default" %>

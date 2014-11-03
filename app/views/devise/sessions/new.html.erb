@@ -1,10 +1,10 @@
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div><%= f.label :username %><br />
+  <div class="title-login">Usuário<br />
   <%= f.text_field :username, autofocus: true %></div>
 
-  <div><%= f.label :password %><br />
+  <div class="title-login">Senha<br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
   <% if devise_mapping.rememberable? -%>

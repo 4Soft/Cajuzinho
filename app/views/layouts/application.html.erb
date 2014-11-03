@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 
-  
+  <!-- -->
 <body>
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container-fluid">
@@ -15,9 +15,8 @@
       <button type="button" class= "navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-oly-focusable">Toglle navigation</span>
       </button>
-      <a class="navbar-brand" href="#"><%= image_tag "logo_head.png", class: "navbar-logo" %>
-        <!-- CHANGE SIZE -->
-      <a class="navbar-brand" href="/">Junior4</a>
+      <a class="navbar-brand" href="/"><%= image_tag "logo_head.png", class: "navbar-logo" %>
+      <!--<a class="navbar-brand" href="/">Junior4</a>-->
 		</div>
     
     <!-- nav links -->
@@ -43,6 +42,9 @@
 		</div>
 	</div>
 </nav>
+  
+   <div class="container">
+     
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
@@ -51,6 +53,14 @@
 <% end %>
 
 <%= yield %>
+     
+  <footer>
+    <hr>
+<p>&copy; <a href= "#"> by 4soft- Treinamento</a></p> 
+  </footer> 
+  
+
+  </div> <!-- class container -->
 
 </body>
 </html>
