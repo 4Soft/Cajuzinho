@@ -1,4 +1,8 @@
 <h2>Reenviar instruções de confirmação </h2>
+<div class="row title-row">
+  <div class="col-md-3 title-line">
+  </div> <!--col-md-3 -->
+</div> <!--row -->
 
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
