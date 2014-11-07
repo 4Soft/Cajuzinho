@@ -7,7 +7,7 @@ AÇÕES DO SISTEMA:
     -Realizam registro
 
   Federação:
-    -convida acessores(podem ser membros de uma EJ)
+    -convida assessores(podem ser membros de uma EJ)
     -convida representates das EJs
     -visualiza todos os dados de todas EJs e de seus membros
 
