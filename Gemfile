@@ -57,4 +57,4 @@ gem 'autoprefixer-rails'
 
 gem 'maskedinput-rails'
 
-ruby '2.1.3'
+ruby '2.1.2'
