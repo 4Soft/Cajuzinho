@@ -16,18 +16,11 @@
 
 //$navbar-default-bg: #98FB98; // <- base.css.scss
 
-@import "bootstrap-sprockets";
-
-@import "bootswatch/lumen/variables";
-
 @import "bootstrap";
 
 body {
   padding-topo: 70px;
 }
-
-/*lumen bootswatch */
-@import "bootswatch/lumen/bootswatch";
 
 @import "base";
 
