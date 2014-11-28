@@ -1,5 +1,6 @@
 class AssessorsController < ApplicationController
 
+  before_action :authenticate_user!
   before_action :set_assessor, only: [:show, :edit, :update, :destroy]
   before_action :set_collections, only: [:new, :edit]
 

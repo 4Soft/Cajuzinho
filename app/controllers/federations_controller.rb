@@ -1,6 +1,6 @@
 class FederationsController < ApplicationController
   before_action :set_federation, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   
   def index
     @federations = Federation.all

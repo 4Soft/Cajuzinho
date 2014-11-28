@@ -1,4 +1,6 @@
 class EjsController < ApplicationController
+	
+	before_action :authenticate_user!
 
 	def index
 		@ej = Ej.all
