@@ -1,9 +1,14 @@
-<h1>Listing members</h1>
+<h1>Membros</h1>
+
+<div class="row title-row">
+  <div class="col-md-3 title-line">
+  </div> <!--col-md-3 -->
+</div> <!--row -->
 
 <table>
   <thead>
     <tr>
-      <th>Role</th>
+      <th>Cargo</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,9 +17,9 @@
     <% @members.each do |member| %>
       <tr>
         <td><%= member.role %></td>
-        <td><%= link_to 'Show', member %></td>
-        <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', member, class: "btn btn-default"%></td>
+        <td><%= link_to 'Editar', edit_member_path(member), class: "btn btn-default"%></td>
+        <td><%= link_to 'Deletar', member, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Member', new_member_path %>
+<%= link_to 'Cadastrar Membro', new_member_path, class: "btn btn-default" %>
