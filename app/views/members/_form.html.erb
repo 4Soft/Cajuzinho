@@ -1,0 +1,20 @@
+<%= simple_form_for(@member) do |f| %>
+  <% if @member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+      <% @member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.input :role, label: "Cargo na EJ", :collection => @cargos %><br>
+  </div>
+  <div class="actions">
+    <%= f.button :submit, "Enviar",  class: "btn btn-default" %>
+  </div>
+<% end %>
