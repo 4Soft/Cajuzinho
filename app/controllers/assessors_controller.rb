@@ -73,7 +73,7 @@ class AssessorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def assessor_params
-      params.require(:assessor).permit(:role)
+      params.require(:assessor).permit!
     end
 
     def set_collections

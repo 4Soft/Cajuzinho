@@ -31,12 +31,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.datetime :locked_at
 
       t.string :name, null:false, default: ""
-      t.string :username, null: false, default: ""
       t.string :address, null: false, default: ""
       t.string :facebook, default: ""
       t.string :skype, default: ""
-      t.integer :telephone, null: false, default: 0
-      t.references :role, polymorphic: true
+      t.integer :telephone, null: false, default: 0      
       t.timestamps
     end
 
