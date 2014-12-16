@@ -16,19 +16,17 @@
 
 //$navbar-default-bg: #98FB98; // <- base.css.scss
 
-@import "bootstrap-sprockets";
-
-@import "bootswatch/lumen/variables";
-
 @import "bootstrap";
+body { padding-top: 60px; }
 
-body {
-  padding-topo: 70px;
+.content {
+  background-color: #eee;
+  padding: 20px;
+  margin: 0 -20px; /* indenta o padding negativo para preservar o grid */
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
-
-/*lumen bootswatch */
-@import "bootswatch/lumen/bootswatch";
-
-@import "base";
-
-

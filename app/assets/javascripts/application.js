@@ -13,11 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
-//= require jquery
-//= require bootstrap-sprockets
-<<<<<<< HEAD
+//= require bootstrap
 //= require maskedinput
+//= require_tree .
 
 
 var ready;
@@ -35,5 +33,3 @@ ready = function() {
 
 $(document).ready(ready);
 $(document).on('page:load', ready);
-=======
->>>>>>> #14

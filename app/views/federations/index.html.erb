@@ -1,32 +1,25 @@
 <h1> Federação </h1>
-<div class="row title-row">
-  <div class="col-md-3 title-line">
-  </div> <!--col-md-3 -->
-</div> <!--row -->
 
-<table>
-	<tr>
-    <p><th>Nome Formal:</th></p>  <!-- put labels -->
-      
-    <th>CNPJ:</th>
-    
-    <th>Site:</th>
-    
-  </tr>
-
-  <% @federations.each do |federation| %>
-
-  <tr>
-    <th><%= federation.formal_name %></th>
-    <th><%= federation.cnpj %></th>
-    <th><%= federation.site %></th>
-    <th><%= link_to "Editar", edit_federation_path(federation), class: "btn btn-default" %></th>
-  </tr>
-
+<table class="table table-striped text-center">
+	<thead>
+    <tr>
+      <p><th>Nome Formal:</th></p>
+      <th>CNPJ:</th>
+      <th>Site:</th>
+      <th>Opções</th>
+    </tr>
+  </thead>
   
-  <% end %>
-
+  <tbody>
+    <% @federations.each do |federation| %>
+      <tr>
+        <th><%= federation.formal_name %></th>
+        <th><%= federation.cnpj %></th>
+        <th><%= federation.site %></th>
+        <th><%= link_to "Editar", edit_federation_path(federation), class: "btn btn-info" %></th>
+      </tr>  
+    <% end %>
+  </tbody>
 </table>
 
-<p>
 <%= link_to "Cadastrar Federação", new_federation_path, class: "btn btn-default" %>
