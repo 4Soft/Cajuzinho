@@ -6,6 +6,11 @@ class MembersController < ApplicationController
   # GET /members.json
   def index
     @members = Member.all
+
+    if params[:member] && params[:member][:role]
+      @members = Member.where(role: params[:member][:role])    
+    end
+
   end
 
   # GET /members/1
@@ -76,6 +81,6 @@ class MembersController < ApplicationController
     end
 
     def set_collections
-      @cargos = ["Presidente", "Vice-Presidente", "Diretor Administrativo", "Diretor de Comunicação e Marketing", "Diretor de Desenvolvimento", "Outro"]
+      @roles = ["Presidente", "Vice-Presidente", "Diretor Administrativo", "Diretor de Comunicação e Marketing", "Diretor de Desenvolvimento", "Outro"]
     end
 end
