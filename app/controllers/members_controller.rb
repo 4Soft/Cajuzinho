@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   before_action :set_member, only: [:show, :edit, :update, :destroy]
-  before_action :set_collections, only: [:new, :edit]
+  before_action :set_collections, only: [:new, :edit, :index]
 
   # GET /members
   # GET /members.json
@@ -82,5 +82,6 @@ class MembersController < ApplicationController
 
     def set_collections
       @roles = ["Presidente", "Vice-Presidente", "Diretor Administrativo", "Diretor de Comunicação e Marketing", "Diretor de Desenvolvimento", "Outro"]
+      
     end
 end
