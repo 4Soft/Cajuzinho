@@ -55,4 +55,6 @@ gem 'autoprefixer-rails'
 
 gem 'maskedinput-rails'
 
+gem 'font-awesome-sass'
+
 ruby '2.1.2'

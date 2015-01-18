@@ -11,11 +11,13 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require font-awesome
  *= require_self
  */
 
 //$navbar-default-bg: #98FB98; // <- base.css.scss
-
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "bootstrap";
 body { padding-top: 60px; }
 
