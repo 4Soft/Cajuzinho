@@ -1,6 +1,6 @@
 <h1>Assessores</h1>
 
-<table class="table table-striped text-center">
+<table class="table table-striped table-bordered table-hover table-with-margin">
   <thead>
     <tr>
       <th>Cargo</th> 
@@ -14,9 +14,9 @@
       <tr>
         <td><%= assessor.role %></td>
         <td>
-          <%= link_to 'Mostrar', assessor, class: "btn btn-success" %>
-          <%= link_to 'Editar', edit_assessor_path(assessor),  class: "btn btn-info" %>
-          <%= link_to 'Deletar', assessor, class: "btn btn-danger", method: :delete, data: { confirm: 'Tem certeza?' } %>
+          <%= link_to icon('file-text-o'), assessor, class: "btn btn-success", title: "Mostrar" %>
+          <%= link_to icon('edit'), edit_assessor_path(assessor),  class: "btn btn-info", title: 'Editar' %>
+          <%= link_to icon('trash-o'), assessor, class: "btn btn-danger",title: 'Deletar', method: :delete, data: { confirm: 'Tem certeza?' } %>
         </td>
       </tr>
     <% end %>
@@ -25,4 +25,4 @@
 
 <br>
 
-<%= link_to 'Cadastrar Assessor', new_assessor_path, class: "btn btn-default" %>
+<%= link_to icon('plus'), new_assessor_path, class: "btn btn-default", title: 'Novo Assessor' %>
