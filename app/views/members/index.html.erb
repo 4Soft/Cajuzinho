@@ -1,27 +1,17 @@
 <h1>Membros</h1>
 
 <div class="row-fluid">
-  <div class= "panel span12">
-    <div class="span12">
-      <h3>Buscar por Cargo</h3>
-      <%= simple_form_for(:member, method: :get) do |f| %>
-        <%= f.input :role, label: "Cargo", required: false, collection: @roles %>
-        <%= f.button :submit, "OK", class:"btn btn-success" %>
-      <% end %>
-    </div>
-  </div>
+  <%= simple_form_for(:member, method: :get) do |f| %>
+    <%= f.input :role, label: "Busca por cargo", required: false, collection: @roles %>
+    <%= f.button :submit, "OK", class:"btn btn-success" %>
+  <% end %>
 </div>
 
-<div class="row title-row">
-  <div class="col-md-3 title-line">
-  </div> <!--col-md-3 -->
-</div> <!--row -->
-
-<table>
+<table class="table table-striped table-bordered table-hover table-with-margin">
   <thead>
     <tr>
       <th>Cargo</th>
-      <th colspan="3"></th>
+      <th>Opções</th>
     </tr>
   </thead>
 
@@ -29,9 +19,9 @@
     <% @members.each do |member| %>
       <tr>
         <td><%= member.role %></td>
-        <td><%= link_to 'Mostrar', member, class: "btn btn-default"%></td>
-        <td><%= link_to 'Editar', edit_member_path(member), class: "btn btn-default"%></td>
-        <td><%= link_to 'Deletar', member, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to icon('file-text-o'), member, class: "btn btn-success", title: 'Mostrar'%>
+            <%= link_to icon('edit'), edit_member_path(member), class: "btn btn-info", title: 'Editar'%>
+            <%= link_to icon('trash-o'), member, class: "btn btn-danger", title: 'Deletar', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -39,4 +29,4 @@
 
 <br>
 
-<%= link_to 'Cadastrar Membro', new_member_path, class: "btn btn-default" %>
+<%= link_to icon('plus'), new_member_path, class: "btn btn-default", title: 'Cadastrar Membro' %>

@@ -1,32 +1,27 @@
 <h1> EJs </h1>
-<div class="row title-row">
-  <div class="col-md-3 title-line">
-  </div> <!--col-md-3 -->
-</div> <!--row -->
 
-<table>
-	<tr>
-    <p><th>Nome Formal:</th></p>  <!-- put labels -->
-      
-    <th>CNPJ:</th>
-    
-    <th>Site:</th>
-    
-  </tr>
+<table class="table table-striped table-bordered table-hover table-with-margin">
+	<thead>
+    <tr>
+      <th>Nome Formal</th>      
+      <th>CNPJ</th>    
+      <th>Site</th>
+      <th>Opções</th>
+    </tr>    
+  </thead>
 
-  <% @ej.each do |ej| %>
-
-  <tr>
-    <th><%= ej.formal_name %></th>
-    <th><%= ej.cnpj %></th>
-    <th><%= ej.site %></th>
-    <th><%= link_to "Mostrar", ej, class: "btn btn-default" %></th>
-    <th><%= link_to "Editar", edit_ej_path(ej), class: "btn btn-default" %></th>
-  </tr>
-
-  <% end %>
-
+  <tbody>
+    <% @ej.each do |ej| %>
+      <tr>
+        <td><%= ej.formal_name %></td>
+        <td><%= ej.cnpj %></td>
+        <td><%= ej.site %></td>
+        <td><%= link_to icon('file-text-o'), ej, class: "btn btn-success", title: "Mostrar" %>
+            <%= link_to icon('edit'), edit_ej_path(ej), class: "btn btn-info", title: "Editar" %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <p>
-<%= link_to "Cadastrar EJ", new_ej_path, class: "btn btn-default" %>
+<%= link_to icon('plus'), new_ej_path, class: "btn btn-default", title: "Cadastrar EJ" %>

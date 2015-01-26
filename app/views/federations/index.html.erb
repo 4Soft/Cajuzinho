@@ -1,11 +1,11 @@
 <h1> Federação </h1>
 
-<table class="table table-striped text-center">
+<table class="table table-striped table-bordered table-hover table-with-margin">
 	<thead>
     <tr>
-      <p><th>Nome Formal:</th></p>
-      <th>CNPJ:</th>
-      <th>Site:</th>
+      <th>Nome Formal</th>
+      <th>CNPJ</th>
+      <th>Site</th>
       <th>Opções</th>
     </tr>
   </thead>
@@ -13,13 +13,13 @@
   <tbody>
     <% @federations.each do |federation| %>
       <tr>
-        <th><%= federation.formal_name %></th>
-        <th><%= federation.cnpj %></th>
-        <th><%= federation.site %></th>
-        <th><%= link_to "Editar", edit_federation_path(federation), class: "btn btn-info" %></th>
+        <td><%= federation.formal_name %></td>
+        <td><%= federation.cnpj %></td>
+        <td><%= federation.site %></td>
+        <td><%= link_to icon('edit'), edit_federation_path(federation), class: "btn btn-info", title: 'Editar'  %></td>
       </tr>  
     <% end %>
   </tbody>
 </table>
 
-<%= link_to "Cadastrar Federação", new_federation_path, class: "btn btn-default" %>
+<%= link_to icon('plus'), new_federation_path, class: "btn btn-default", title: "Cadastrar Federação" %>
