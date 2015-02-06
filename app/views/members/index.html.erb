@@ -1,9 +1,13 @@
 <h1>Membros</h1>
 
-<div class="row-fluid">
+<div class="form-group">
   <%= simple_form_for(:member, method: :get) do |f| %>
-    <%= f.input :role, label: "Busca por cargo", required: false, collection: @roles %>
-    <%= f.button :submit, "OK", class:"btn btn-success" %>
+    <div class="row">
+      <div class="col-md-4">
+        <%= f.input :role, class: "col-md-4", label: "Busca por cargo", required: false, collection: @roles %>
+      </div>
+      <%= f.button :submit, "OK", class:"btn btn-success col-md-1 btn-class" %>
+    </div>
   <% end %>
 </div>
 
