@@ -1,5 +1,7 @@
 CAJUZINHO
 
+"TAREFA DE CASA" DOS NOSSOS TRAINEES ;)
+
 Sistema de gerenciamento de EJs e seus membros
 [http://cajuzinho.herokuapp.com]
 AÇÕES DO SISTEMA:
